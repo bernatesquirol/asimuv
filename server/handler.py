@@ -1,4 +1,12 @@
-import json
+try:
+    import unzip_requirements
+except ImportError:
+    pass
+import simplejson as json
+import numpy as np
+import pandas as pd
+
+from algorithm import main
 
 
 def hello(event, context):
@@ -22,3 +30,5 @@ def hello(event, context):
         "event": event
     }
     """
+
+
