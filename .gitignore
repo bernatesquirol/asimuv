@@ -2,3 +2,4 @@
 .ipynb_checkpoints/
 
 server/algorithm/__pycache__/
+server/dataset_raw/
