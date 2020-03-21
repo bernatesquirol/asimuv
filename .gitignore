@@ -2,3 +2,32 @@
 .ipynb_checkpoints/
 
 server/algorithm/__pycache__/
+
+# Distribution / packaging
+server/.Python
+server/env/
+server/build/
+server/develop-eggs/
+server/dist/
+server/downloads/
+server/eggs/
+server/.eggs/
+server/lib/
+server/lib64/
+server/parts/
+server/sdist/
+server/var/
+server/*.egg-info/
+server/.installed.cfg
+server/*.egg
+
+# Serverless directories
+server/.serverless
+server/node_modules
+server/.requirements.zip
+
+server/__pycache__/
+
+server/venv/
+
+server/unzip_requirements.py

@@ -5,30 +5,42 @@ except ImportError:
 import simplejson as json
 import numpy as np
 import pandas as pd
+import networkx as nx
 
-from algorithm import main
+from algorithm import utils, main
 
 
-def hello(event, context):
-    body = {
-        "message": "Go Serverless v1.0! Your function executed successfully!",
-        "input": event
-    }
-
+def protocol(body, code=200):
     response = {
-        "statusCode": 200,
-        "body": json.dumps(body)
+        "statusCode": code,
+         "headers": {
+            'Content-Type': 'application/json', 
+            'Access-Control-Allow-Origin': '*'
+        },
+        "body": json.dumps(body, indent=2, ignore_nan=True)
     }
-
     return response
 
-    # Use this code if you don't use the http event with the LAMBDA-PROXY
-    # integration
-    """
-    return {
-        "message": "Go Serverless v1.0! Your function executed successfully!",
-        "event": event
-    }
-    """
+
+def route(event, context):
+    try:
+        if event['queryStringParameters']['number']:
+            return protocol(main.get_route(int(event['queryStringParameters']['number'])))
+    except Exception as e:
+        body = {
+            "message": "Terrible mistake: {}".format(str(e)),
+            "input": event
+        }
+        return protocol(body, 422)
+
+# ### Test
+
+# +
+# event_try = {'queryStringParameters':{'number':2}}
+# recommended = route(event_try, None)
+
+# +
+# recommended
+# -
 
 
