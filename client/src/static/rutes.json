@@ -1,0 +1,50 @@
+{
+    "routes":[
+        {
+            "type":"CO2",
+            "stops":[
+                {
+                    "type":"bus",
+                    "detail":"7",
+                    "from": {"stop_name":"221", "lat": 41.393702,  "long":2.157062},
+                    "to": {"stop_name":"149", "lat": 41.391856,  "long":2.1706213},
+                    "cost": 5,
+                    "duration": 10
+                },
+                {
+                      "type":"walk",
+                      "detail":"",
+                      "from": {"stop_name":"149", "lat": 41.391856,  "long":2.1706213},
+                      "to": {"stop_name":"Urquinaona", "lat": 41.389780,  "long": 2.171812},
+                      "duration": 7,
+                      "cost": 0
+                }
+            ],
+          "duration" : 17,
+          "cost" : 10
+        },
+      {
+        "type":"Time",
+            "stops":[
+                {
+                    "type":"fgc",
+                    "detail":"7",
+                    "from": {"stop_name":"Provença", "lat": 41.392959,  "long":2.157885},
+                    "to": {"stop_name":"Catalunya", "lat": 41.387391,  "long":2.169435},
+                    "cost": 5,
+                    "duration": 10
+                },
+              {
+                    "type":"metro",
+                    "detail":"",
+                    "from": {"stop_name":"Catalunya", "lat": 41.387391,  "long":2.169435},
+                    "to": {"stop_name":"Urquinaona", "lat": 41.389780,  "long":2.171812},
+                    "duration": 7,
+                    "cost": 0
+              }
+            ],
+          "duration" : 17,
+          "cost" : 10
+      }
+    ]
+}

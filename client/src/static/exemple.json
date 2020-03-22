@@ -1,0 +1,16 @@
+{
+    "routes":[
+        {
+            "type":"CO2",
+            "stops":[
+                {
+                    "type":"metro",
+                    "detail":"L1",
+                    "from": {"stop_name":"Urqui", "lat": 41.3892478,  "long":2.1706213},
+                    "to": {"stop_name":"Cat", "lat": 41.3892478,  "long":2.1706213},
+                    "cost": 50
+                }
+            ]
+        }
+    ]
+}

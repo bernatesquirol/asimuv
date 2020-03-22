@@ -28,6 +28,17 @@
   color: #61dafb;
 }
 
+.cardreco {
+  max-width: 350px !important;
+}
+.cardcontainer{
+  display: inline-grid;
+  justify-items: center;
+  margin-bottom: 20px !important;
+}
+.icon_vehicle{
+  width:'100%'!important
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
