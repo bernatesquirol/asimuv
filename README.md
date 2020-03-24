@@ -10,6 +10,6 @@ https://bidaia-asimuv.firebaseapp.com/
 
 Demo:
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/iSqcTw7fFQE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+https://www.youtube.com/iSqcTw7fFQE
 
 Martí Rubio, Marina Viñals i Bernat Esquirol
