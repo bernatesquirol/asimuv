@@ -8,4 +8,8 @@ Website:
 
 https://bidaia-asimuv.firebaseapp.com/
 
-Martí Rubio, Marina Viñals i Bernat Esquirol
+Demo:
+
+https://www.youtube.com/watch?v=iSqcTw7fFQE
+
+MartÃ­ Rubio, Marina ViÃ±als i Bernat Esquirol
