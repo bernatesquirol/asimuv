@@ -197,7 +197,7 @@ function Result (props) {
   const [ref, { x, y, width }] = useDimensions();
   return (
     <div>
-      {data.length>0?<Header>Les teves rutes recomenades són...:</Header>:null}
+      {data.length>0?<Header>Your recommended routes are...:</Header>:null}
       {data.map((r,i)=>{
         let freq = r.freq?r.freq:freqConstant
         return (<Accordion>
@@ -228,14 +228,14 @@ function Result (props) {
                 <Card.Content extra>
                 <List>
                     <List.Item icon='eur' content={`${getPrice(r)} x ${freq} = ${getPrice(r)*freq} € ${r.stops[0].type=='bus' || r.stops[0].type=='metro' || r.stops[0].type=='fgc' ? '('+getPrice(r)*freq/10 + ' T-Casual)' : ''}`} />
-                    <List.Item icon='clock' content={`${getDuration(r)} x ${freq} = ${getDuration(r)*freq} minuts`} />
+                    <List.Item icon='clock' content={`${getDuration(r)} x ${freq} = ${getDuration(r)*freq} minutes`} />
                     <List.Item 
                       icon='leaf'
-                      content={`${getCO2(r)} x ${freq} = ${getCO2(r)*freq} mg de PM2.5 emesos`}
+                      content={`${getCO2(r)} x ${freq} = ${getCO2(r)*freq} mg PM2.5 emitted`}
                     />
                     <List.Item
                       icon='heart'
-                      content={`${getHeart(r)} x ${freq} = ${getHeart(r)*freq} calories consumides`}
+                      content={`${getHeart(r)} x ${freq} = ${getHeart(r)*freq} cal. consumed`}
                     />
                   </List>
                 </Card.Content>

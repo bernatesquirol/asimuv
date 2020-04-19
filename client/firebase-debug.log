@@ -1,0 +1,44 @@
+[debug] [2020-04-19T16:56:09.153Z] ----------------------------------------------------------------------
+[debug] [2020-04-19T16:56:09.156Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\berna\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2020-04-19T16:56:09.157Z] CLI Version:   7.15.1
+[debug] [2020-04-19T16:56:09.157Z] Platform:      win32
+[debug] [2020-04-19T16:56:09.157Z] Node Version:  v12.14.1
+[debug] [2020-04-19T16:56:09.158Z] Time:          Sun Apr 19 2020 18:56:09 GMT+0200 (Central European Summer Time)
+[debug] [2020-04-19T16:56:09.158Z] ----------------------------------------------------------------------
+[debug] [2020-04-19T16:56:09.159Z] 
+[debug] [2020-04-19T16:56:09.172Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-04-19T16:56:09.172Z] > authorizing via signed-in user
+[debug] [2020-04-19T16:56:09.172Z] [iam] checking project bidaia-asimuv for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2020-04-19T16:56:09.174Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2020-04-19T16:56:09.174Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2020-04-19T16:56:20.270Z] [iam] error while checking permissions, command may fail: FirebaseError: Authentication Error: Your credentials are no longer valid. Please run firebase login --reauth
+
+For CI servers and headless environments, generate a new token with firebase login:ci
+[debug] [2020-04-19T16:56:20.275Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2020-04-19T16:56:20.276Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ <request body omitted>
+[debug] [2020-04-19T16:56:31.360Z] Authentication Error: Your credentials are no longer valid. Please run firebase login --reauth
+
+For CI servers and headless environments, generate a new token with firebase login:ci
+[debug] [2020-04-19T16:56:31.370Z] FirebaseError: Authentication Error: Your credentials are no longer valid. Please run firebase login --reauth
+
+For CI servers and headless environments, generate a new token with firebase login:ci
+    at Object.<anonymous> (C:\Users\berna\AppData\Roaming\npm\node_modules\firebase-tools\lib\auth.js:23:32)
+    at Module._compile (internal/modules/cjs/loader.js:955:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:991:10)
+    at Module.load (internal/modules/cjs/loader.js:811:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:723:14)
+    at Module.require (internal/modules/cjs/loader.js:848:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at Object.<anonymous> (C:\Users\berna\AppData\Roaming\npm\node_modules\firebase-tools\lib\commands\login.js:8:12)
+    at Module._compile (internal/modules/cjs/loader.js:955:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:991:10)
+    at Module.load (internal/modules/cjs/loader.js:811:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:723:14)
+    at Module.require (internal/modules/cjs/loader.js:848:19)
+    at require (internal/modules/cjs/helpers.js:74:18)
+    at loadCommand (C:\Users\berna\AppData\Roaming\npm\node_modules\firebase-tools\lib\commands\index.js:5:19)
+    at module.exports (C:\Users\berna\AppData\Roaming\npm\node_modules\firebase-tools\lib\commands\index.js:85:20)
+[error] 
+[error] Error: Failed to get Firebase project bidaia-asimuv. Please make sure the project exists and your account has permission to access it.

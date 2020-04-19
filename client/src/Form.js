@@ -41,21 +41,21 @@ class Form extends React.Component  {
             </Accordion.Title>
             <Accordion.Content active={activeIndex === i}>
               <p>
-              {`Nombre de parades: ${r.markers.length}`}<br/>
-              {`Freqüència setmanal: ${r.freq}`}
+              {`Number of stops: ${r.markers.length}`}<br/>
+              {`Weekly frequency: ${r.freq}`}
               </p>
             </Accordion.Content>
             </Accordion>
           )
         })}
-        <Button onClick={()=>this.setState({modalVisible:true})}>Crear nova ruta</Button>
+        <Button onClick={()=>this.setState({modalVisible:true})}>Create new route</Button>
         <Modal ref={ref} open={this.state.modalVisible} 
               onClose={()=>{this.setState({modalVisible:false, newRute:{}})}}
-              trigger={<Button onClick={()=>this.props.saveRoutes(this.state.rutes)}>Troba les rutes recomenades</Button>} >
-         <Modal.Header>Crear nova ruta</Modal.Header>
+              trigger={<Button onClick={()=>this.props.saveRoutes(this.state.rutes)}>Find recommended routes</Button>} >
+         <Modal.Header>Create new route</Modal.Header>
           <Modal.Content>
-          <div>Nom de la ruta: <Input placeholder='Name' onChange={(e, name)=>{this.setState((state)=>({newRute:{...state.newRute,name:name.value}}))}}></Input></div>
-            <div>Quants dies a la setmana repeteixes aquesta ruta? <Input placeholder='Frequency (per week)' onChange={(e, freq)=>{this.setState((state)=>({newRute:{...state.newRute,freq:parseInt(freq.value)}}))}}></Input></div>
+          <div>Route name: <Input placeholder='Name' onChange={(e, name)=>{this.setState((state)=>({newRute:{...state.newRute,name:name.value}}))}}></Input></div>
+            <div>How many days a week you do this route? <Input placeholder='Frequency (per week)' onChange={(e, freq)=>{this.setState((state)=>({newRute:{...state.newRute,freq:parseInt(freq.value)}}))}}></Input></div>
 
             <Map width={400} height={400} 
                 saveRoute={this.createNewRute}

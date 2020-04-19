@@ -32,3 +32,9 @@ server/__pycache__/
 server/venv/
 
 server/unzip_requirements.py
+
+walkability/shapes/
+walkability/walkability-viz/
+walkability/segments.csv
+
+walkability/prova.ipynb

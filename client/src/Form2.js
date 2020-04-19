@@ -31,10 +31,10 @@ function Form2 (props) {
     <> 
     <div style={{minWidth:250}}>
     <Header as='h2'>
-    Benvingut/da a bidaIA, el teu nou gestor de mobilitat.<br></br>
+      Welcome to bidaIA, your mobility manager.<br></br>
     </Header>
     <Header as='h4'>
-      Volem fer-te la vida més fàcil i oferir-te la millor opció pels teus desplaçaments
+      We want to make your life easy and offer you the best option for your transport needs
     </Header>
     <Accordion>
       {rutes.map((r,i)=>{
@@ -64,28 +64,28 @@ function Form2 (props) {
         index={rutes.length}        
       >
         <Icon name='dropdown' />
-        <Popup content='Indica els trajectes que fas normalment i que vols analitzar; prem el botó per afegir-ne un!' 
-        trigger={<Button onClick={openModal} primary>Crear nova ruta</Button>}/>
+        <Popup content='Insert here the routes that you usually do, press the button to analyse a new route!' 
+        trigger={<Button onClick={openModal} primary>Crete new route</Button>}/>
       </Accordion.Title>
       </Accordion>
       </div>
       {rutes.length>0?
         <>
         <br></br>     
-        <Popup content='Consulta les diferents opcions de mobilitat que hem trobat per a tu'
-        trigger={<Button width={width} onClick={()=>{props.saveRoutes(rutes)}} secondary>Calcula les rutes recomenades</Button>}
+        <Popup content='See the different mobility options we found'
+        trigger={<Button width={width} onClick={()=>{props.saveRoutes(rutes)}} secondary>Calculate optimal routes</Button>}
         />
         </>
       :null}
       <Modal open={modalVisible} 
             onClose={closeModal}
              >
-        <Modal.Header>Introdueix un trajecte quotidià</Modal.Header>
+        <Modal.Header>Input your usual route</Modal.Header>
         <Modal.Content>
-          <div ref={ref}>Nom de la ruta: <Input placeholder='Name' onChange={(e, name)=>{console.log(e,name);setNewRute({...newRute,name:name.value})}}></Input></div>
-          <div>Quants dies a la setmana repeteixes aquesta ruta? <Input placeholder='Frequency (per week)' onChange={(e, freq)=>{setNewRute({...newRute,freq:parseInt(freq.value)})}}></Input></div>
+          <div ref={ref}>Route's name: <Input placeholder='Name' onChange={(e, name)=>{console.log(e,name);setNewRute({...newRute,name:name.value})}}></Input></div>
+          <div>How many days a week you repeat this route? <Input placeholder='Frequency (per week)' onChange={(e, freq)=>{setNewRute({...newRute,freq:parseInt(freq.value)})}}></Input></div>
           <br></br>
-          <div>Fes click al mapa per definirles hores i els llocs de la ruta</div>
+          <div>Click on the map to define places and hours</div>
           {width?<Map width={width} height={400} 
               saveRoute={createNewRute}
               saveMarkers={(markers)=>
